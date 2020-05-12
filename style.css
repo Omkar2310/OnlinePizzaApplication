@@ -1,0 +1,177 @@
+body{
+	background: url("back3.jpeg");
+	background-repeat: no-repeat center center center;
+	
+	background-size: cover;
+	font-family: sans-serif;
+}
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  
+}
+header{
+	width : 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+
+.head{
+	float: left;
+	color: #fff;
+	font-family: cursive;
+
+}
+
+
+nav{
+	float: right;
+}
+
+li{
+	display: inline;
+	padding: 1rem;
+}
+
+li a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.active{
+	color: gold;
+}
+
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 1%;
+}
+
+showcase h1{
+	color: #fff;
+	font-family: cursive;
+	text-align:center;
+}
+
+showcase h3{
+	color: #fff;
+	letter-spacing: 5px;
+	text-align:center;
+}
+
+.category{
+	color: #fff;
+	text-align: center;
+	display: flex;
+	font-family: center;
+	margin-top: 5%;
+	
+}
+
+.frontpiz{
+	width: 70%;
+	border-radius: 50%;
+
+}
+
+.moreinfo{
+	position: relative;
+	width: 100;
+}
+
+.bgimag2{
+	opacity: 0.81;
+	width: 100%;
+}
+
+.centeredinfo{
+
+	position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+}
+	
+.myinf{
+	color: #fff; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.2);
+   padding: 10px; 
+}
+
+
+.NonVeg,.pizzman{
+padding-left: 1rem;
+}
+
+h4{
+	font-size: 1rem;
+	margin: 5%;
+	font-family: cursive;
+	color: blue;
+}
+
+p{
+	color: #ff9127
+	font-size: 2rem;
+	font-family: cursive;
+	color: rgb(255,255,255);
+}
+
+.btn{
+	background-color: gold;
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+	margin-left: 20%;
+}
+
+.btn1{
+	background-color: gold;
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+	margin-left: 20%;
+}
+
+
+.btn2{
+	background-color: gold;
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+	margin-left: 20%;
+}
+
+.btn3{
+	background-color: gold;
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+	margin-left: 20%;
+}
+
+
+
+
+.centered{
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer{
+	text-align: center;
+	background-color: #000;
+}

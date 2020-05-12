@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="signup.css">
+  <link rel="stylesheet" type="text/css" href="SignUpJs.js">
+
+ 	<script src="jquery.min.js">
+	</script>
+ 
+   <script>
+
+
+
+function valEma(){
+	var email=document.getElementById("mm").value;
+	console.log(email);
+	var regEx = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      var vae = regEx.test(email);
+	
+	if(!vae)
+	{
+	console.log("HH");
+	document.getElementById("mm").insertAdjacentHTML("afterend", "<p>Enter a valid email</p>"); 	
+	//alert("Incorrect Email");	
+	return false;
+	}
+else{
+	return true;
+}
+}
+
+
+function showPass1() {
+  var x = document.getElementById("psw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+} 
+
+function showPass2() {
+  var x = document.getElementById("pswconfirm");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+} 
+
+
+
+</script>
+
+
+  <script>
+  $(document).ready(function(){
+      /*! Fades in page on load */
+      $('body').css('display', 'none');
+      $('body').fadeIn(1500);
+
+      });
+
+$(document).ready(function() {
+
+  $('#first_form').submit(function(e) {
+  var pass1=$('#psw').val();
+      var pass2=$('#pswconfirm').val();
+      if(pass1===pass2)
+      {
+        console.log("Correct");
+      }
+      else
+      {
+        $('#pswconfirm').after('<span class="error" style="color:red;">Re-Enter a Password correctly</span>');
+        return false; 
+     }
+     });
+
+});
+
+
+    
+  $(document).on("click", "a", function () {
+
+    // get the href attribute
+    var newUrl = $(this).attr("href");
+
+    // veryfy if the new url exists or is a hash
+    if (!newUrl || newUrl[0] === "#") {
+        // set that hash
+        location.hash = newUrl;
+        return;
+    }
+
+    // now, fadeout the html (whole page)
+    $("html").fadeOut(1000,function () {
+        // when the animation is complete, set the new location
+        location = newUrl;
+    });
+
+    // prevent the default browser behavior.
+    return false;
+});
+
+
+  </script>
+</head>
+<body >
+<div style="background-image: url('back3.jpeg'); background-size: cover ;">
+
+  <header>
+    
+    <div class="head">
+      <h2>GOS PIZZA'S HERE</h2>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="About.html" class="active"> About Us </a></li>
+      <li><a href="Contact.html" class="active"> Contact Us</a></li>
+      <li><a href="first_xml.xml" class="active">Offers</a> </li>
+      <li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+      <li>
+        <a href="javascript:history.back()" class="active">Go Back</a>
+      </li>
+
+      <li>
+        <a href="SignUp.html" class="active">SignUp</a>
+      </li>
+
+      <!-- <input type="button" value="Back"
+    onclick="history.go(-1)" style="align-content: left"> -->
+      </ul>
+    </nav>
+    <!-- END OF NAVIGN -->
+  </header>
+
+
+<form id="first_form" action="Welcomesignup.php"   style="border:1px solid #ccc" method="POST">
+  <div class="container">
+    <h1 style="color: gold">Sign Up</h1>
+    <p style="color: gold">Please fill in this form to create an account.</p>
+    <hr>
+
+    
+     <label for="user_el" style="color: gold"><b>Email</b></label><br>
+    <input type="text" placeholder="Enter Email" name="em1"  id="mm"><p id="myp"> </p>
+	<br/>
+    <label for="user_nme" style="color: gold"><b>Name</b></label>
+    <input type="text" id="user_name" size="100" name="nam" placeholder="Enter Name" title="Enter name" pattern="[A-Za-z]{1,32}" onblur="valEma(this);" required>
+	<br/>
+	<br/>
+    
+    <label for="psw"  style="color: gold"><b>Password</b></label>
+    <input type="password" size="100"  placeholder="Enter Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="10" id="psw" name="psw" required>
+
+	 <input type="checkbox" onclick="showPass1()"><label  style="color: orange">Show Password </label>
+	<br/>
+	<br/>
+    <label for="psw-repeat" size="100"   style="color: gold"><b>Confirm Password</b></label>
+    <input type="password" id="pswconfirm" placeholder="Repeat Password 8-12 characters" pattern=".{8,12}" maxlength="10" name="psw-repeat" required>
+    <input type="checkbox" onclick="showPass2()"><label  style="color: orange">Show Password </label> 
+	<br/>
+	<br/>  
+    <div id="message">
+  <h6>Password must contain the following:</h6>
+  <p id="letter" class="invalid">A lowercase letter</p>
+  <p id="capital" class="invalid">A capital (uppercase) letter</p>
+  <p id="number" class="invalid">A number</p>
+  <p id="length" class="invalid">Minimum 8 characters</p>
+    </div>
+
+
+    <label  style="color: orange">
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"  style="color: black"> Remember me
+    </label>
+    
+    <p  style="color: #000000">By creating an account you agree to our <a href="term&con.html" class="active" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="reset" class="cancelbtn">Cancel</button>
+      <button type="submit"  class="signupbtn"  >Sign Up</button>
+      
+    </div>
+  </div>
+</form>
+
+ 
+
+
+
+<footer>
+  <nav>
+      <ul>
+      <li><a href="term&con.html" class="active">Terms and Conditions</a></li>
+      <li><a href="sitemap.html" class="active"> Sitemap </a></li>
+      </ul>
+    </nav>
+  </footer>
+
+
+  <script>
+      
+      var myInput = document.getElementById("psw");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+
+      // show the message box when focus
+
+      myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+      }      
+
+      //hide msg box when out of focus
+      myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+      }
+
+
+      myInput.onkeyup = function() {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.value.match(lowerCaseLetters)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+      }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if(myInput.value.match(upperCaseLetters)) {
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if(myInput.value.match(numbers)) {
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+
+        // Validate length
+        if(myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+      }      
+
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+	background: url("back2.jpg");
+	background-repeat: no-repeat center center center;
+	
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+header{
+	width : 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+
+.head{
+	float: left;
+	color: #fff;
+	font-family: cursive;
+
+}
+
+
+nav{
+	float: right;
+}
+
+li{
+	display: inline;
+	padding: 1rem;
+}
+
+li a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.active{
+	color: gold;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 150px 0;
+
+}
+
+td {
+  padding: 10px 0;
+}

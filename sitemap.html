@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sitemap</title>
+	<link rel="stylesheet" type="text/css" href="sitecss.css">
+	<script src="jquery.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      /*! Fades in page on load */
+      $('body').css('display', 'none');
+      $('body').fadeIn(1500);
+
+      });
+
+    
+  $(document).on("click", "a", function () {
+
+    // get the href attribute
+    var newUrl = $(this).attr("href");
+
+    // veryfy if the new url exists or is a hash
+    if (!newUrl || newUrl[0] === "#") {
+        // set that hash
+        location.hash = newUrl;
+        return;
+    }
+
+    // now, fadeout the html (whole page)
+    $("html").fadeOut(1000,function () {
+        // when the animation is complete, set the new location
+        location = newUrl;
+    });
+
+    // prevent the default browser behavior.
+    return false;
+});
+
+
+  </script>
+</head>
+<body>
+
+	<header>
+		<div class="head">
+			<h2>GOS PIZZA'S HERE</h2>
+		</div>
+
+		<!-- NAVIGATION -->
+		<nav>
+			<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="About.html" class="active"> About Us </a></li>
+			<li><a href="Contact.html" class="active"> Contact Us</a></li>
+			<li><a href="first_xml.xml" class="active">Offers</a>	</li>
+			<li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+			<li>
+				<a href="javascript:history.back()" class="active">Go Back</a>
+			</li>
+
+			<li>
+				<a href="SignUp.html" class="active">SignUp</a>
+			</li>
+			</ul>
+		</nav>
+		<!-- END OF NAVIGN -->
+	</header>
+
+	<section style="color: white">
+			
+			<table style="padding: 30px" align="left">
+			<tr style="color: gold">
+    			<th>About Us</th>
+   				<th>HomePage</th>
+   				<th>Payment</th>
+   				<th>Order History</th>
+   				<th>Offers</th>
+  			</tr>	
+  				<tr>
+  					<td><a href="About.html">About Us</a></td>
+  					<td><a href="index.html">HomePage</a></td>
+  					<td><a href="Customersupp.html" class="">Payments</a></td>
+  					<td><a href="Customersupp.html" >Orders</a></td>
+  					<td><a href="first_xml.xml">Offers</a></td>
+  				</tr>
+  				<tr>
+					<td><a href="Contact.html">Contact Us</a></td>
+					<td><a href="term&con.html">Terms and Conditions</a></td>
+
+  				</tr>
+			</table>
+
+	</section>
+
+
+</body>
+</html>

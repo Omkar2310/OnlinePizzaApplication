@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Us </title>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="jquery.min.js">
+	</script>	
+<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="buttonLoader.css" rel="stylesheet">
+	<script src="jquery.buttonLoader.js"></script>
+	
+  <script>
+  $(document).ready(function () {
+    
+    $('.has-spinner').click(function () {
+        var btn = $(this);
+        $(btn).buttonLoader('start');
+        setTimeout(function () {
+            $(btn).buttonLoader('stop');
+        }, 3000);
+    });
+});
+  $(document).ready(function(){
+      /*! Fades in page on load */
+      $('body').css('display', 'none');
+      $('body').fadeIn(1500);
+	 
+      });
+	$(document).on("click", ".btn", function () {
+		$("this").addClass("acti");
+		
+		});
+    
+  $(document).on("click", "a", function () {
+
+    // get the href attribute
+    var newUrl = $(this).attr("href");
+
+    // veryfy if the new url exists or is a hash
+    if (!newUrl || newUrl[0] === "#") {
+        // set that hash
+        location.hash = newUrl;
+        return;
+    }
+
+    // now, fadeout the html (whole page)
+    $("html").fadeOut(1000,function () {
+        // when the animation is complete, set the new location
+        location = newUrl;
+    });
+
+    // prevent the default browser behavior.
+    return false;
+});
+
+	
+
+  </script>
+</head>
+<body>
+
+	<header>
+		<div class="head">
+			<h2>GOS PIZZA'S HERE</h2>
+		</div>
+
+		<!-- NAVIGATION -->
+		<nav>
+			<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="About.html" class="active"> About Us </a></li>
+			<li><a href="Contact.html" class="active"> Contact Us</a></li>
+			<li><a href="first_xml.xml" class="active">Offers</a>	</li>
+			<li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+			<li>
+				<a href="javascript:history.back()" class="active">Go Back</a>
+			</li>
+
+			<li>
+				<a href="SignUp.html" class="active">SignUp</a>
+			</li>
+			</ul>
+		</nav>
+		<!-- END OF NAVIGN -->
+	</header>
+
+	<div class="box">
+		<div class="imgBox">
+			<img src="pizzaabt.jpg" height="200px" width="230px">
+		</div>
+
+		<div class="content">
+			<h2>About Us </h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+
+	</div>
+
+	<img src="back2.jpg" width=100%>
+  	
+<button class="btn btn-default has-spinner" id="one">Button1</button>
+  
+	<footer>
+	<nav>
+			<ul>
+			<li><a href="term&con.html" class="active">Terms and Conditions</a></li>
+			<li><a href="sitemap.html" class="active"> Sitemap </a></li>
+			</ul>
+		</nav>
+	</footer>	
+</body>
+</html>

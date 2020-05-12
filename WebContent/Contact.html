@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+	<script src="jquery.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+	<link href="buttonLoader.css" rel="stylesheet">
+	<script src="jquery.buttonLoader.js"></script>
+<style>
+	#myPopup
+	{
+		/*display: none;*/
+	}
+	.has-spinner{
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+</style>
+
+  <script>
+  $(document).ready(function(){
+      /*! Fades in page on load */
+      $('body').css('display', 'none');
+      $('body').fadeIn(1500);
+
+      });
+
+$(document).ready(function () {
+    
+    $('.has-spinner').click(function () {
+        var btn = $(this);
+        $(btn).buttonLoader('start');
+        setTimeout(function () {
+            $(btn).buttonLoader('stop');
+        }, 3000);
+    });
+    
+    $('.contactform-btn').click(function () {
+        var btn = $(this);
+        $(btn).buttonLoader('start');
+        setTimeout(function () {
+            $(btn).buttonLoader('stop');
+        }, 3000);
+    });
+});
+    
+  $(document).on("click", "a", function () {
+
+    // get the href attribute
+    var newUrl = $(this).attr("href");
+
+    // veryfy if the new url exists or is a hash
+    if (!newUrl || newUrl[0] === "#") {
+        // set that hash
+        location.hash = newUrl;
+        return;
+    }
+
+    // now, fadeout the html (whole page)
+    $("html").fadeOut(1000,function () {
+        // when the animation is complete, set the new location
+        location = newUrl;
+    });
+
+    // prevent the default browser behavior.
+    return false;
+});
+
+
+  </script>
+<script>
+	function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\.])+\@([A-Za-z0-9\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+        	// document.getElementById("em").innerHTML+='<span class="error">This field is required</span>';
+           	alert("Enter Valid Email");
+           	document.getElementById("em").focus;
+            return false;
+        }
+
+        return true;
+
+}
+</script>
+
+</head>
+
+<body>
+
+	<header>
+		<div class="head">
+			<h2>GOS PIZZA'S HERE</h2>
+		</div>
+
+		<!-- NAVIGATION -->
+		<nav>
+			<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="About.html" class="active"> About Us </a></li>
+			<li><a href="Contact.html" class="active"> Contact Us</a></li>
+			<li><a href="first_xml.xml" class="active">Offers</a>	</li>
+			<li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+			<li>
+				<a href="javascript:history.back()" class="active">Go Back</a>
+			</li>
+
+			<li>
+				<a href="SignUp.html" class="active">SignUp</a>
+			</li>
+			<li>
+				<a href="Login.html" class="active">Login</a>
+			</li>
+			</ul>
+		</nav>
+		<!-- END OF NAVIGN -->
+	</header>
+
+	<div class="contactus">
+		
+		<h2>Contact Us</h2>
+		<div class="border"></div>
+
+		<form class="contact-form" action="/Hello" method="post" >
+
+		<input type="text" class="contactform-text" placeholder="Your name"name="name1" pattern="[A-Za-z]{1,32}">
+		<input type="text" class="contactform-text" name="email1" id="em" placeholder="Your email" title="Enter valid Email (abc@gmail.com)" onblur="return validateEmail(this);">
+		<span id="pop"> </span>
+		<!-- <input type="number" maxlength="10" class="contactform-text" placeholder="Your mobile"> -->
+		<input type="text" maxlength="10" name="mob1" pattern="[7-9]{1}[0-9]{9}"  class="contactform-text" title="Please enter exactly 10 digits" placeholder="Enter mobile" />
+		<br>
+		<textarea class="contactform-text" name="query1" placeholder="Your message" required>	</textarea>
+		<input type="reset" class="contactform-btn" value="Reset">
+
+		
+		<input type="submit" class="contactform-btn" value="Send" id="one1">
+		</form>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		<form action="Action_file_upload.jsp" method="post" enctype="multipart/form-data">
+	    <section align="center">
+	    <input type="file" class="contactform-btn" name="file" size="50" />
+	    <br />
+	    <br />
+	    <br />
+	    <br />
+	    <input type="submit" class="contactform-btn" value="Upload File" />
+	    </section>
+	    </form>
+
+	</div>
+
+
+
+<footer>
+	<nav>
+			<ul>
+			<li><a href="term&con.html" class="active">Terms and Conditions</a></li>
+			<li><a href="sitemap.html" class="active"> Sitemap </a></li>
+			</ul>
+		</nav>
+	</footer>	
+
+</body>
+</html>

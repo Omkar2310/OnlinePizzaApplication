@@ -1,0 +1,56 @@
+body{
+	background: url("back3.jpeg");
+	background-repeat: no-repeat center center center;
+	
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+header{
+	width : 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+
+.head{
+	float: left;
+	color: #fff;
+	font-family: cursive;
+
+}
+
+
+nav{
+	float: right;
+}
+
+li{
+	display: inline-flex;
+	padding: 1rem;
+}
+
+li a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.active{
+	color: gold;
+}
+
+.secondnav{
+	float: left;
+}
+
+.secondnav > ul > li:hover{
+	text-decoration: none;
+	border-bottom: 2px solid orange;
+}
+
+.deliv .priv{
+	display: list-item;
+	
+}

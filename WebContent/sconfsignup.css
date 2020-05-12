@@ -1,0 +1,50 @@
+body{
+	background: url("back3.jpeg");
+	background-repeat: no-repeat center center center;
+	
+	background-size: cover;
+	font-family: sans-serif;
+}
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  
+}
+header{
+	width : 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+
+.head{
+	float: left;
+	color: #fff;
+	font-family: cursive;
+
+}
+
+
+nav{
+	float: right;
+}
+
+li{
+	display: inline;
+	padding: 1rem;
+}
+
+li a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.active{
+	color: gold;
+}
+

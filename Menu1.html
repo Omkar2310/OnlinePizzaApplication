@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GOS PIZZA</title>
+   
+
+  
+	<link rel="stylesheet" type="text/css" href="menu1.css">
+	<script src="jquery.min.js">
+	</script>
+  <script type="text/javascript" src="menu1js.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      /*! Fades in page on load */
+      $('body').css('display', 'none');
+      $('body').fadeIn(1500);
+
+      });
+
+    
+  $(document).on("click", "a", function () {
+
+    // get the href attribute
+    var newUrl = $(this).attr("href");
+
+    // veryfy if the new url exists or is a hash
+    if (!newUrl || newUrl[0] === "#") {
+        // set that hash
+        location.hash = newUrl;
+        return;
+    }
+
+    // now, fadeout the html (whole page)
+    $("html").fadeOut(1000,function () {
+        // when the animation is complete, set the new location
+        location = newUrl;
+    });
+
+    // prevent the default browser behavior.
+    return false;
+});
+
+
+  </script>
+  <style type="text/css">
+    .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 60%; /* Full width */
+  height: 80%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: orange; /* Fallback color */
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: orange;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;color: white}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+  </style>
+
+</head>
+<body style="color: orange;background-color: #40a596">
+	<!-- HEADER -->
+	<header>
+    
+    <div class="head">
+      <h2>GOS PIZZA'S HERE</h2>
+    </div>
+
+    <!-- <nav class="cartbut" style="float: left;"> -->
+      
+        <button id=myBtn >My Cart</button>
+      
+    <!-- </nav> -->
+
+    <!-- For Cart Showing Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Order Details</h3>
+            <span class="close">&times;</span>
+            <h2>Our GOS PIZZA's ready for U</h2>
+            <h3>My Cart</h3>
+          </div>
+          <div class="modal-body">
+            <p id=listitem >Orders:</p>
+            <p id=totalbill>Total:</p>
+
+            <!-- <p>Some other text...</p> -->
+          </div>
+          <div class="modal-footer">
+            <!-- <h3>Modal Footer</h3> -->
+          </div>
+        </div>
+
+      </div>
+
+
+        <!-- //scripting -->
+        <script type="text/javascript">
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+
+    document.getElementById("totalbill").innerHTML=total;
+    document.getElementById("listitem").value="";
+    console.log(item);
+    var res=item.split("\n");
+
+    document.getElementById("listitem").innerHTML=item;
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="About.html" class="active"> About Us </a></li>
+      <li><a href="Contact.html" class="active"> Contact Us</a></li>
+      <li><a href="first_xml.xml" class="active">Offers</a> </li>
+      <li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+      <li>
+        <a href="javascript:history.back()" class="active">Go Back</a>
+      </li>
+
+      <li>
+        <a href="SignUp.html" class="active">SignUp</a>
+      </li>
+
+      <!-- <input type="button" value="Back"
+    onclick="history.go(-1)" style="align-content: left"> -->
+      </ul>
+    </nav>
+    <!-- END OF NAVIGN -->
+  </header>
+
+	<table style="padding: 30px" align="left" class="tab1">
+			<tr style="color: gold">
+    			<th>Paneer Pizza</th>
+   				<th>Margarita Pizza</th>
+   				<th>Mushroom Pizza</th>
+   				<!-- <th>Order History</th>
+   				<th>Offers</th> -->
+  			</tr>	
+  				<tr>
+  					<td>
+  						<img src="my-vegpizza.jpg">
+  					</td>
+  					<td>
+  						<img src="my-nonveg.jpg">
+  					</td>
+
+  					<td>
+  						<img src="my-nonveg.jpg">
+  					</td>
+  				</tr>
+
+          <tr>
+            <td>
+              <h4>Paneer,Capsicum and delicious Veggies</h3> 
+            </td>
+            <td>
+              <h4>Olive,Capsicum and Margherita</h3> 
+            </td>
+
+            <td>
+              <h4>Mushroom,Capsicum and delicious Veggies</h3> 
+              
+            </td>
+          </tr>
+
+
+
+  				<tr class="tab1price">
+  					<td>
+  						<h3>Price:399      <input type="button" name="Paneer Pizza" id="b1" onClick="PrintCart(this.id,name,399)" value="Add to Cart"></h3> 
+  					</td>
+  					<td>
+  						<h3>Price:299 <input type="button" id="b2" name="Margarita Pizza" onClick="PrintCart(this.id,name,299)" value="Add to Cart"></h3>
+  					</td>
+
+  					<td>
+  						<h3>Price:349<input type="button" id="b3" name="Mushroom Pizza" onClick="PrintCart(this.id,name,349)" value="Add to Cart"></h3>
+  						
+  					</td>
+  				</tr>
+			</table>
+
+
+      <table style="padding: 30px" align="left" class="tab2">
+      <tr style="color: gold">
+          <th>Double Cheese Margherita</th>
+          <th>Farm House</th>
+          <th>Peppy Panner </th>
+          <!-- <th>Order History</th>
+          <th>Offers</th> -->
+        </tr>
+
+
+        <tr>
+            <td>
+              <img src="Margherit.jpg">
+            </td>
+            <td>
+              <img src="Farmhouse.jpg">
+            </td>
+
+            <td>
+              <img src="DCMargherita.jpg">
+            </td>
+          </tr>
+
+          <tr class="tab2price">
+            <td>
+              <h3>Price:299 <input type="button"  onClick="PrintCart(this.id,name,299)" id="b1" value="Add to Cart"></h3>
+            </td>
+            <td>
+              <h3>Price:199 <input type="button"  onClick="PrintCart(this.id,name,199)" id="b2" value="Add to Cart"></h3>
+            </td>
+
+            <td>
+              <h3>Price:329 <input type="button"  onClick="PrintCart(this.id,name,329)" id="b3" value="Add to Cart"></h3>
+              
+            </td>
+          </tr>
+
+        </table>
+
+
+        <table style="padding: 30px" align="left" class="tab3">
+      <tr style="color: gold">
+          <th>Mexican Green Wave</th>
+          <th>Deluxe Veggie</th>
+          <th>Veggie Paradise </th>
+          <!-- <th>Order History</th>
+          <th>Offers</th> -->
+        </tr>
+
+
+        <tr>
+            <td>
+              <img src="MGWave.jpg">
+            </td>
+            <td>
+              <img src="DelV.jpg">
+            </td>
+
+            <td>
+              <img src="VegDel.jpg">
+            </td>
+          </tr>
+
+          <tr class="tab3price">
+            <td>
+              <h3>Price:299 <input type="button" id="b1"  onClick="PrintCart(this.id,name,299)" value="Add to Cart"></h3>
+            </td>
+            <td>
+              <h3>Price:199 <input type="button" id="b2" value="Add to Cart"  onClick="PrintCart(this.id,name,199)"></h3>
+            </td>
+
+            <td>
+              <h3>Price:329 <input type="button" id="b3"  onClick="PrintCart(this.id,name,329)" value="Add to Cart"></h3>
+              
+            </td>
+          </tr>
+
+        </table>
+<footer>
+  <nav>
+      <ul>
+      <li><a href="term&con.html" class="active">Terms and Conditions</a></li>
+      <li><a href="sitemap.html" class="active"> Sitemap </a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

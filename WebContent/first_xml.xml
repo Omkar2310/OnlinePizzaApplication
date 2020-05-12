@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Offers>
+	<offer category="veg-pizza">
+		<name>Veg Paneer Pizza</name>
+		<descrip>Our Veg Pizza stuffed with Paneer and 
+			delicious vegies</descrip>
+		<price>350</price>
+	</offer>
+
+	<offer category="veg-pizza1">
+		<name>Veg Magarhita Pizza</name>
+		<descrip>Our Veg Pizza with cheesy magarita and 
+			delicious vegies</descrip>
+		<price>400</price>
+	</offer>
+
+	<offer category="veg-pizza2">
+		<name>Veg Mushroom Pizza</name>
+		<descrip>Our Veg Pizza stuffed with Mushrooms and 
+			delicious vegies</descrip>
+		<price>335</price>
+	</offer>
+
+	<offer category="nonveg-pizza">
+		<name>Chicken Pizza</name>
+		<descrip>Our NonVeg Pizza stuffed with roasted Chicken</descrip>
+		<price>450</price>
+	</offer>
+
+	<offer category="nonveg-pizza">
+		<name>Chicken-Cheesy Pizza</name>
+		<descrip>Our NonVeg Pizza stuffed with roasted Cheesy Chicken</descrip>
+		<price>450</price>
+	</offer>
+</Offers>

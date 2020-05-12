@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Terms and Conditions</title>
+	<link rel="stylesheet" type="text/css" href="styletnc.css">
+	<script src="jquery.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      /*! Fades in page on load */
+      $('body').css('display', 'none');
+      $('body').fadeIn(1500);
+
+      });
+
+    
+  $(document).on("click", "a", function () {
+
+    // get the href attribute
+    var newUrl = $(this).attr("href");
+
+    // veryfy if the new url exists or is a hash
+    if (!newUrl || newUrl[0] === "#") {
+        // set that hash
+        location.hash = newUrl;
+        return;
+    }
+
+    // now, fadeout the html (whole page)
+    $("html").fadeOut(1000,function () {
+        // when the animation is complete, set the new location
+        location = newUrl;
+    });
+
+    // prevent the default browser behavior.
+    return false;
+});
+
+
+  </script>
+</head>
+<body>
+	<!-- HEADER -->
+	<header>
+		<div class="head">
+			<h2>GOS PIZZA'S HERE</h2>
+		</div>
+
+		<!-- NAVIGATION -->
+		<nav>
+			<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="About.html" class="active"> About Us </a></li>
+			<li><a href="Contact.html" class="active"> Contact Us</a></li>
+			<li><a href="first_xml.xml" class="active">Offers</a>	</li>
+			<li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+			<li>
+				<a href="javascript:history.back()" class="active">Go Back</a>
+			</li>
+
+			<li>
+				<a href="SignUp.html" class="active">SignUp</a>
+			</li>
+			</ul>
+		</nav>
+		<!-- END OF NAVIGN -->
+	</header>
+	<!-- END OF HEADER -->
+
+
+	<!-- Second Nav Tab -->
+		<!-- <nav class="secondnav">
+			<ul>
+			<li><a href="#" class="active">Delivery Policies</a></li>
+			<li><a href="#" class="active">Privacy Policies</a></li>
+			</ul>
+		</nav> -->
+
+
+		<br/>
+	
+
+		<section style="color: #00FFFF">
+			<br/>
+			<strong>
+			<!-- <strong>Delivery Orders</strong><br/> -->
+			<h3 style="color: gold">Delivery orders are accepted if the following criteria are met:</h3>
+			
+			<ul class="deliv">
+				<li>The customer's delivery location falls within the permitted delivery zone of the designated Mojo Pizza outlet.</li>
+				<li>The delivery address being mapped to the nearest outlet that delivers in the customer's delivery location.</li>
+				<li>Online availability of the outlet to accept and process the order.</li>
+				<li>In the event, the customer's delivery location is not listed within the permitted delivery zone of the outlet, the order cannot be placed. However, you may choose to pick up your order from the nearest Mojo Pizza outlet.</li>
+			</ul>
+			
+			<hr>
+
+			<strong style="color: gold">Menu</strong>
+
+			<ul class="priv">
+				<li>The menu is displayed as per the availability of the menu items in the selected outlet.</li>
+				<li>In case certain items from the menu are not listed, the particular outlet does not carry those items on their menu.</li>
+				<li>In case of non-availability of ordered menu items at the selected outlet, the order will not be executed and will be duly informed to the customer.</li>
+			</ul>
+			</strong>
+		</section>
+		
+
+
+
+	<footer>
+	<nav>
+			<ul>
+			<li><a href="term&con.html" class="active">Terms and Conditions</a></li>
+			<li><a href="sitemap.html" class="active"> Sitemap </a></li>
+			</ul>
+		</nav>
+	</footer>	
+</body>
+</html>

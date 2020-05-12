@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GOS PIZZA</title>
+	 <xml id="myxm" src="first_xml.xml"></xml>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		function LoadXML()
+		{
+
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","first_xml.xml",true);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		}	
+
+		$(document).ready(function(){
+			/*! Fades in page on load */
+			$('body').css('display', 'none');
+			$('body').fadeIn(1500);
+
+			});
+
+		
+
+	</script>
+</head>
+<body>
+	<!-- HEADER -->
+	<header>
+		
+		<div class="head">
+			<h2>GOS PIZZA'S HERE</h2>
+		</div>
+
+		<!-- NAVIGATION -->
+		<nav>
+			<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="About.html" class="active"> About Us </a></li>
+			<li><a href="Contact.html" class="active"> Contact Us</a></li>
+			<li><a href="first_xml.xml" class="active">Offers</a>	</li>
+			<li><a href="Customersupp.html" class="active"> Customer Support </a></li>
+			<li>
+				<a href="javascript:history.back()" class="active">Go Back</a>
+			</li>
+
+			<li>
+				<a href="SignUp.html" class="active">SignUp</a>
+			</li>
+			<li>
+				<a href="LoginAcc.html" class="active">Login</a>
+			</li>
+
+			<!-- <input type="button" value="Back"
+		onclick="history.go(-1)" style="align-content: left"> -->
+			</ul>
+		</nav>
+		<!-- END OF NAVIGN -->
+	</header>
+
+	<!-- END OF HEADER -->
+	<showcase>
+		<div class="container">
+			<h1>Food tastes better when you eat with family </h1>
+			<h3>Veg,Nonveg all types of PiZZaS are Available </h3>
+		
+			<div class="category">
+				<div class="Veg">
+					<img src="my-vegpizza.jpg" class="frontpiz" />
+					<h4>Veg Pizza</h4>
+					<p>
+						A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier
+					</p>
+				</div>
+
+				<div class="NonVeg">
+					<img src="my-nonveg.jpg" class="frontpiz"/>
+					<h4>NonVeg Pizza</h4>
+					<p>
+						Choose your favourite non-veg pizzas from our menu. Get fresh non-veg pizza with your choice of crusts & toppings
+					</p>
+				</div>
+
+				<div class="pizzman">
+					<img src="my-pizzamania.png"class="frontpiz" />
+					<h4>New PizzaMania</h4>
+					<p style="color: black">
+						Indulge into mouth-watering taste of Pizza mania range, perfect answer to all your food cravings
+					</p>
+				</div>
+			</div>
+		</div>
+	</showcase>
+	<!-- END OF SHOWCASE -->
+
+	<a href="Menu1.html" id="m1"><button class="btn">Read More</button></a>
+	<a href="Menu1.html"><button class="btn1">Read More</button></a>
+	<a href="Menu1.html"><button class="btn2">Read More</button></a>
+
+
+	<section class="moreinfo">
+
+			<img src="back1.jpg" class="bgimag2"  >
+
+			<div class="centeredinfo">
+				<h3> <span class="myinf">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</span> </h3>
+
+			</div>
+
+	</section>
+
+
+
+	<footer>
+	<nav>
+			<ul>
+			<li><a href="term&con.html" class="active">Terms and Conditions</a></li>
+			<li><a href="sitemap.html" class="active"> Sitemap </a></li>
+			</ul>
+		</nav>
+	</footer>	
+</body>
+</html>
