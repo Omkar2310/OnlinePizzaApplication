@@ -9,4 +9,12 @@ Also tickets can be raised by customers for any complaints.
 
 
 
-<img src = "/assets/home.png" width="400" height="500"/> 
+<img src = "/assets/home.png" width="800" height="500"/> 
+
+
+Contact Us
+<img src = "/assets/contact.png" width="800" height="500"/>
+
+
+Sign Up
+<img src = "/assets/signup.png" width="800" height="500"/>
