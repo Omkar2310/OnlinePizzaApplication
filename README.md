@@ -18,3 +18,13 @@ Contact Us
 
 Sign Up
 <img src = "/assets/signup.png" width="800" height="500"/>
+
+
+Menu
+<img src = "/assets/menu.png" width="800" height="500"/>
+
+
+Sitemap
+<img src = "/assets/site.png" width="800" height="500"/>
+
+
